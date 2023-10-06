@@ -5,7 +5,7 @@ const AuthPage = ({ onAuth }) => {
     e.preventDefault();
     const { value } = e.target[0];
     axios
-      .post("https://js-chat-backend.pages.dev/authenticate", {
+      .post("https://chat-backend-fr5k.onrender.com/authenticate", {
         username: value,
       })
       .then((response) => onAuth({ ...response.data, secret: value }))
